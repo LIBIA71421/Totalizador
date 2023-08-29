@@ -20,7 +20,11 @@ function descuento(total) {
   }
   else if (total >= 10000 && total < 30000)
   {
-    descuento = 0.01;
+    descuento = 0.1;
+  }
+  else if (total >= 30000)
+  {
+    descuento = 0.15;
   }
 
   return descuento;
