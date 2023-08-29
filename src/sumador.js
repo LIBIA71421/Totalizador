@@ -48,6 +48,11 @@ function impuesto(estado)
         case 'AL':
             imp = 0.04;
             break;
+        case 'CA':
+            imp = 0.0825;
+            break;
+        default:
+            break;
     }
     return imp;
 }
