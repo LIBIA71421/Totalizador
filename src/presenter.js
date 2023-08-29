@@ -17,5 +17,5 @@ form.addEventListener("submit", (event) => {
   let totalDescuento = multiplicar(porcentajeDescuento, total);
 
   precioNeto.innerHTML = "<p>Precio neto: (" + firstNumber + " * " + secondNumber + ") = " + total + "</p>";
-  desc.innerHTML = "<p>Descuento: " + porcentajeDescuento + "% = " + totalDescuento + "</p>";
+  desc.innerHTML = "<p>Descuento: " + multiplicar(porcentajeDescuento,100) + "% = " + totalDescuento + "</p>";
 });
