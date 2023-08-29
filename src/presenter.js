@@ -1,9 +1,10 @@
-import {sumar,multiplicar} from "./sumador.js";
+import {sumar,multiplicar, descuento} from "./sumador.js";
 
 const first = document.querySelector("#total");
 const second = document.querySelector("#precio");
 const form = document.querySelector("#totalizador-form");
-const div = document.querySelector("#resultado-div");
+const precioNeto = document.querySelector("#resultado-div");
+const desc = document.querySelector("#descuento-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -11,5 +12,10 @@ form.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
 
-  div.innerHTML = "<p>Precio neto: (" + firstNumber + " * " + secondNumber + ") = " + multiplicar(firstNumber, secondNumber) + "</p>";
+  let total = multiplicar(firstNumber, secondNumber);
+  let porcentajeDescuento = descuento(total);
+  let totalDescuento = multiplicar(porcentajeDescuento, total);
+
+  precioNeto.innerHTML = "<p>Precio neto: (" + firstNumber + " * " + secondNumber + ") = " + total + "</p>";
+  desc.innerHTML = "<p>Descuento: " + porcentajeDescuento + "% = " + totalDescuento + "</p>";
 });
