@@ -55,6 +55,10 @@ function impuesto(estado)
             break;
     }
     return imp;
+} 
+function calcularPrecioTotal(precioNeto, descuento, impuesto) {
+  let total = impuesto - descuento;
+  total = total + precioNeto;
+  return total;
 }
-
-export {sumar, multiplicar, descuento, impuesto};
+export {sumar, multiplicar, descuento, impuesto, calcularPrecioTotal};
