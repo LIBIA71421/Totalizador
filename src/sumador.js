@@ -42,6 +42,9 @@ function impuesto(estado)
         case 'NV':
             imp = 0.08;
             break;
+        case 'TX':
+            imp = 0.0625;
+            break;
     }
     return imp;
 }
