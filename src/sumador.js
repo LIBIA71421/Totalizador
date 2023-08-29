@@ -1,9 +1,11 @@
 function sumar(a, b) {
   return a + b;
 }
+
 function multiplicar(a, b) {
   return a * b;
 }
+
 function descuento(total) {
   let descuento = 0;
   if (total >= 1000 && total < 3000)
@@ -29,5 +31,16 @@ function descuento(total) {
 
   return descuento;
 }
+function impuesto(estado)
+{
+    let imp = 0;
+    switch(estado)
+    {
+        case 'UT':
+            imp = 0.0665;
+            break;
+    }
+    return imp;
+}
 
-export {sumar, multiplicar, descuento};
+export {sumar, multiplicar, descuento, impuesto};

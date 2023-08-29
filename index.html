@@ -9,19 +9,20 @@
       <input type="number" id="precio" />
 
     </br>
-    <p>elija el estado para calcular el impuesto
-      <SELECT>
+    <label for="estado">elija el estado para calcular el impuesto: </label>
+      <SELECT name="estado" id="estado">
         <OPTION value="UT">UT</OPTION>
         <OPTION value="NV">NV</OPTION>
         <OPTION value="TX">TX</OPTION>
         <OPTION value="AL">AL</OPTION>
         <OPTION value="CA">CA</OPTION>
       </SELECT>
-    </p>  
+    </br>  
       <input type="submit" value="Totalizar" id="total-button" />
     </form>
     <div id="resultado-div"></div>
     <div id="descuento-div"></div>
+    <div id="impuesto-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
