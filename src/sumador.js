@@ -45,6 +45,9 @@ function impuesto(estado)
         case 'TX':
             imp = 0.0625;
             break;
+        case 'AL':
+            imp = 0.04;
+            break;
     }
     return imp;
 }
